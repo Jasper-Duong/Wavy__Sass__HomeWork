@@ -23,6 +23,12 @@ header .navbar .navbar-brand img {
   width: 80px;
 }
 
+@media screen and (max-width: 1199px) {
+  header .navbar .navbar-brand img {
+    width: 48px;
+  }
+}
+
 header .navbar .navbar-collapse {
   justify-content: flex-end;
 }
