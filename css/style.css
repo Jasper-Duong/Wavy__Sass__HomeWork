@@ -4,15 +4,44 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1260px;
+  padding: 0 30px;
+}
+
+.container.bound {
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
 header {
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 600;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header .navbar {
-  max-width: 1260px;
-  padding: 0 30px;
+  background-color: transparent;
+}
+
+header .navbar .logo__mobile {
+  margin-left: 40px;
+  width: 48px;
+}
+
+header .navbar .logo__mobile img {
+  width: 100%;
 }
 
 header .navbar .navbar-brand {
@@ -31,6 +60,7 @@ header .navbar .navbar-brand img {
 
 header .navbar .navbar-collapse {
   justify-content: flex-end;
+  overflow-y: scroll !important;
 }
 
 header .navbar .navbar-collapse .navbar-nav .nav-item {
@@ -42,6 +72,10 @@ header .navbar .navbar-collapse .navbar-nav .nav-item {
   line-height: 80px;
   position: relative;
   transition: all 0.3s;
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item.scrollNavItem {
+  line-height: 48px;
 }
 
 header .navbar .navbar-collapse .navbar-nav .nav-item:after {
@@ -119,5 +153,46 @@ header .navbar .nav__info .nav__social .fab:hover {
 
 .cta:hover i, .cta:hover span {
   color: #b61984;
+}
+
+#intro {
+  font-family: "Montserrat", Arial, sans-serif;
+  padding: 60px 0;
+}
+
+#intro .top__wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#intro .top__wave img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#intro .intro__left {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+#intro .intro__left p {
+  font-size: 16.5px;
+  color: #b61984;
+  font-weight: 600;
+  margin-bottom: 8.25px;
+}
+
+#intro .intro__left h1 {
+  font-size: 57px;
+  color: #181818;
+  font-weight: 700;
+}
+
+#intro .intro__right img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

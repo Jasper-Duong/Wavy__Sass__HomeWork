@@ -2,20 +2,31 @@ header {
   font-family: $ff-main;
   font-size: $fs-main;
   font-weight: $fw-main;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
   .navbar {
-    max-width: 1260px;
-    padding: 0 30px;
+    background-color: transparent;
+    .logo__mobile{
+      margin-left: 40px;
+      width: 48px;
+      img{
+        width: 100%;
+      }
+    }
     .navbar-brand {
       padding: 0;
       img {
         width: 80px;
-        @include screenMax(1199px){
+        @include screenMax(1199px) {
           width: 48px;
         }
       }
     }
     .navbar-collapse {
       justify-content: flex-end;
+      overflow-y: scroll !important;
       .navbar-nav .nav-item {
         @include styleText($fs-main, $color-main, $fw-main);
         margin: 0 50px 0 0;
@@ -23,6 +34,9 @@ header {
         line-height: 80px;
         position: relative;
         transition: all 0.3s;
+        &.scrollNavItem{
+          line-height: 48px;
+        }
         &:after {
           content: " ";
           position: absolute;
@@ -40,14 +54,14 @@ header {
           transform: scale(0);
           transition: all 0.3s;
         }
-        &.active:after{
+        &.active:after {
           visibility: visible;
           transform: scale(1);
         }
-        &:hover{
+        &:hover {
           color: $color-sub;
         }
-        &:hover:after{
+        &:hover:after {
           visibility: visible;
           transform: scale(1.5);
         }
@@ -62,7 +76,6 @@ header {
         @include styleText($fs-cta, white, $fw-cta);
         padding: 14px 20.25px;
         margin: 6px;
-        
       }
       .nav__social {
         font-size: 13.586px;
@@ -79,4 +92,3 @@ header {
     }
   }
 }
-

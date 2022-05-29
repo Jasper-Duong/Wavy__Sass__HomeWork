@@ -37,11 +37,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="container navbar navbar-expand-xl navbar-light bg-light">
-        <a class="navbar-brand" href="#"
-          ><img src="./images/crest.png" alt=""
-        /></a>
+    <header class="container bound">
+      <nav class="container bound navbar navbar-expand-xl navbar-light">
         <button
           class="navbar-toggler"
           type="button"
@@ -50,6 +47,12 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a id="logo" class="navbar-brand d-xl-block d-none" href="#"
+          ><img src="./images/crest.png" alt=""
+        /></a>
+        <div class="logo__mobile d-xl-none">
+          <img src="./images/crest.png" alt="">
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Home</a>
@@ -75,6 +78,23 @@
       </nav>
     </header>
 
+    <section id="intro">
+      <div class="top__wave">
+        <img src="./images/yellow_top_wave_01.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 intro__left">
+            <p>ABOUT US</p>
+            <h1>The language teaching experts</h1>
+          </div>
+          <div class="col-lg-6 intro__right">
+            <img src="./images/hero_team.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -92,5 +112,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Style JS -->
+    <script src="./js/style.js"></script>
   </body>
 </html>
