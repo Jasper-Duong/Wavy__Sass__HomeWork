@@ -29,15 +29,25 @@ header {
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-}
-
-header .navbar {
   background-color: transparent;
 }
 
+@media screen and (max-width: 1199px) {
+  header {
+    background-color: white;
+  }
+}
+
 header .navbar .logo__mobile {
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-right: auto;
   width: 48px;
+}
+
+@media screen and (min-width: 1199px) {
+  header .navbar .logo__mobile {
+    display: none;
+  }
 }
 
 header .navbar .logo__mobile img {
@@ -50,20 +60,25 @@ header .navbar .navbar-brand {
 
 header .navbar .navbar-brand img {
   width: 80px;
+  display: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1199px) {
   header .navbar .navbar-brand img {
-    width: 48px;
+    display: block;
   }
 }
 
 header .navbar .navbar-collapse {
   justify-content: flex-end;
-  overflow-y: scroll !important;
 }
 
-header .navbar .navbar-collapse .navbar-nav .nav-item {
+header .navbar .navbar-collapse .collapse__content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .navbar .navbar-collapse .collapse__content .navbar-nav .nav-item {
   font-size: 13px;
   color: #181818;
   font-weight: 600;
@@ -74,11 +89,11 @@ header .navbar .navbar-collapse .navbar-nav .nav-item {
   transition: all 0.3s;
 }
 
-header .navbar .navbar-collapse .navbar-nav .nav-item.scrollNavItem {
+header .navbar .navbar-collapse .collapse__content .navbar-nav .nav-item.scrollNavItem {
   line-height: 48px;
 }
 
-header .navbar .navbar-collapse .navbar-nav .nav-item:after {
+header .navbar .navbar-collapse .collapse__content .navbar-nav .nav-item:after {
   content: " ";
   position: absolute;
   z-index: 5;
@@ -96,18 +111,45 @@ header .navbar .navbar-collapse .navbar-nav .nav-item:after {
   transition: all 0.3s;
 }
 
-header .navbar .navbar-collapse .navbar-nav .nav-item.active:after {
+header .navbar .navbar-collapse .collapse__content .navbar-nav .nav-item.active:after {
   visibility: visible;
   transform: scale(1);
 }
 
-header .navbar .navbar-collapse .navbar-nav .nav-item:hover {
+header .navbar .navbar-collapse .collapse__content .navbar-nav .nav-item:hover {
   color: #b61984;
 }
 
-header .navbar .navbar-collapse .navbar-nav .nav-item:hover:after {
+header .navbar .navbar-collapse .collapse__content .navbar-nav .nav-item:hover:after {
   visibility: visible;
   transform: scale(1.5);
+}
+
+header .navbar .navbar-collapse.show .collapse__content {
+  z-index: 99;
+  overflow-y: auto;
+  width: 30%;
+  display: block;
+}
+
+header .navbar .navbar-collapse.show .collapse__content .navbar-nav .nav-item {
+  line-height: 48px;
+}
+
+header .navbar .navbar-collapse.show .collapse__content .navbar-nav .nav-item.active:after {
+  display: none;
+}
+
+header .navbar .navbar-collapse.show .collapse__content .navbar-nav .nav-item:hover:after {
+  display: none;
+}
+
+header .navbar .navbar-collapse.show .collapse__content .nav__info {
+  display: inline-block;
+}
+
+header .navbar .navbar-collapse.show .collapse__content .nav__info .nav__phone {
+  margin-left: 0;
 }
 
 header .navbar .nav__info {
