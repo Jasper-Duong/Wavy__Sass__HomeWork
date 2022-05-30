@@ -14,6 +14,9 @@ window.onscroll = function () {
       ele.classList.add("scrollNavItem");
     });
     getEle("header").style.backgroundColor = "white";
+    if (window.innerWidth > 1199) {
+      getEle("header").style.position = "fixed";
+    }
   } else {
     getEleId("logo").style.display = "block";
     // getEle(".logo__mobile img").style.display = "block";
@@ -21,8 +24,8 @@ window.onscroll = function () {
       ele.classList.remove("scrollNavItem");
     });
     if (window.innerWidth > 1199) {
-      console.log("hey")
       getEle("header").style.backgroundColor = "transparent";
+      getEle("header").style.position = 'absolute';
     }
   }
 };

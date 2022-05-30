@@ -2,7 +2,7 @@ header {
   font-family: $ff-main;
   font-size: $fs-main;
   font-weight: $fw-main;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
