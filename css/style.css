@@ -492,8 +492,10 @@ footer .container {
   font-family: "Robotto", sans-serif;
 }
 
-footer .container .footer__col {
-  padding: 0 40px;
+@media screen and (min-width: 1199px) {
+  footer .container .footer__col {
+    padding: 0 40px;
+  }
 }
 
 footer .container .footer__col .footer__title {
