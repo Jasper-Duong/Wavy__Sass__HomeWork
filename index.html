@@ -24,6 +24,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- ANIMATE CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -35,7 +40,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="container bound p-0">
+    <header class="container bound p-0 animate__animated animate__fadeIn">
       <nav class="container navbar navbar-expand-xl navbar-light">
         <button
           class="navbar-toggler"
@@ -84,11 +89,13 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 intro__left mt-4 mt-xl-0">
+          <div
+            class="col-lg-6 intro__left mt-4 mt-xl-0 animate__animated animate__fadeInLeft"
+          >
             <p>ABOUT US</p>
             <h1>The language teaching experts</h1>
           </div>
-          <div class="col-lg-6 intro__right">
+          <div class="col-lg-6 intro__right animate__animated animate__fadeIn">
             <img src="./images/hero_team.png" alt="" />
           </div>
         </div>
@@ -99,8 +106,11 @@
     </section>
 
     <section id="team">
+      <div class="team__bottom wave">
+        <img src="./images/Wave_White_bottom_right_shape_01.png" alt="" />
+      </div>
       <div class="container">
-        <div class="row">
+        <div class="row animate__animated animate__fadeIn">
           <div class="team__wrapper col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
             <div class="team__member">
               <div class="team__thumb">
@@ -215,18 +225,15 @@
           </div>
         </div>
       </div>
-      <div class="team__bottom wave">
-        <img src="./images/Wave_White_bottom_right_shape_01.png" alt="" />
-      </div>
     </section>
 
     <section id="submit">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 submit__left">
+          <div class="col-lg-7 submit__left animate__animated animate__fadeInLeft">
             <img src="./images/conatct_inner.png" alt="" />
           </div>
-          <div class="col-lg-5 submit__right mt-md-5">
+          <div class="col-lg-5 submit__right mt-md-5 animate__animated animate__fadeIn">
             <div class="submit__form">
               <h1 class="submit__title">Find Your Course</h1>
               <div class="row submit__input">
@@ -269,7 +276,7 @@
     </section>
 
     <footer>
-      <div class="container">
+      <div class="container animate__animated animate__fadeIn">
         <div class="row">
           <div class="footer__col col-sm-6 col-xs-12 col-xl-3 mb-5 mb-xl-0">
             <h1 class="footer__title">Contact Us</h1>
@@ -332,10 +339,10 @@
             <h1 class="footer__title">Newsletter</h1>
             <div class="footer__subscribe">
               <div class="footer__email">
-                <input type="email" placeholder="Your email" size="40">
+                <input type="email" placeholder="Your email" size="40" />
               </div>
               <div class="footer__btn">
-                <input type="submit" value="SUBSCRIBE">
+                <input type="submit" value="SUBSCRIBE" />
               </div>
             </div>
           </div>
